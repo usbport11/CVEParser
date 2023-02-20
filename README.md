@@ -14,7 +14,7 @@ create table list (
   name VARCHAR(32),
   vuln_status VARCHAR(32),
   published TIMESTAMP,
-  description VARCHAR(512),
+  description TEXT,
   attack_vector VARCHAR(32),
   attack_complexity VARCHAR(16),
   base_score real,
