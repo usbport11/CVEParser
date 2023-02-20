@@ -1,7 +1,19 @@
 # CVEParser
-Get CVE from services.nvd.nist.gov and add to postgres
+Get CVE from services.nvd.nist.gov and add to postgres <br>
+Code that get data from sites CVE trends and OpenCVE get from open ready examples
 
-<b>DB prepare</b><br><br>
+<b>Python prepare</b><br>
+<pre>
+pip3 install requests
+pip3 install bs4
+pip3 install psycopg2
+</pre>
+
+<b>DB prepare</b><br>
+<pre>
+apt install postgresql
+</pre>
+
 Create database
 <pre>
 create database cve;
