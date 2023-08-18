@@ -19,24 +19,10 @@ Create database
 create database cve;
 </pre>
 
-Create table
+Crontab
 <pre>
-create table list (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(32),
-  vuln_status VARCHAR(32),
-  published TIMESTAMP,
-  description TEXT,
-  attack_vector VARCHAR(32),
-  attack_complexity VARCHAR(16),
-  base_score real,
-  base_severity VARCHAR(16)
-);
-</pre>
-
-Create user and grant access
-<pre>
-create user cve with password 'cve';
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO cve;
-GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO cve;
+0 1 * * * /root/cve/cve.py > /root/cve/cve.log 2>&1
+0 2 * * 6 /root/cve/updateCVEs.py > /root/cve/update.log 2>&1
+0 3 * * 6 /root/cve/getHighCritCVE.py > /root/cve/highcrit.log 2>&1
+0 2 * * 7 /root/cve/clearRejectCVEs.sh > /root/cve/clearReject.log 2>&1
 </pre>
