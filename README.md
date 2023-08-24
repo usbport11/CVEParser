@@ -26,3 +26,14 @@ Crontab
 0 3 * * 6 /root/cve/getHighCritCVE.py > /root/cve/highcrit.log 2>&1
 0 2 * * 7 /root/cve/clearRejectCVEs.sh > /root/cve/clearReject.log 2>&1
 </pre>
+
+For web need files from jquery.
+<ul>
+<li>bootstrap.min.css</li>
+<li>datatables.min.css</li>
+<li>buttons.dataTables.min.css</li>
+<li>jquery-3.5.1.js</li>
+<li>jquery.dataTables.min.js</li>
+<li>dataTables.buttons.min.js</li>
+<li>buttons.colVis.min.js</li>
+</ul>
